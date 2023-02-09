@@ -114,6 +114,7 @@
                 model = await tmPose.loadFromFiles(model_file, weights_file, metadata_file);
             } else {
                 alert('이미지 / 포즈만 사용 가능합니다!');
+                loadingEl.remove();
                 return false;
             }
             maxPredictions = model.getTotalClasses();
